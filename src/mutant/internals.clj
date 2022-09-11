@@ -32,7 +32,7 @@
 (defn namespaces
   "Returns a map from files to namespaces in a given directory."
   [directory-name]
-  (->> (find/find-clojure-sources-in-dir (file directory-name))
+  (->> (find/find-sources-in-dir (file directory-name))
        (map (juxt identity (comp second file/read-file-ns-decl)))
        (into {})))
 

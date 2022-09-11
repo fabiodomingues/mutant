@@ -1,6 +1,7 @@
 (ns mutant.core
   (:require [mutant.internals :as mi]
-            [jansi-clj [core :as jansi] auto]
+            [jansi-clj.auto]
+            [jansi-clj.core :as jansi]
             [clj-diffmatchpatch :as dmp]))
 
 (defn run [source-directory test-directory test-fn]
